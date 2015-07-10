@@ -1,0 +1,2 @@
+//GET /quizes/question
+exports.question = function(req,res)
