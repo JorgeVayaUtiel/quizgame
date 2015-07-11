@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     
     <title>Preguntas</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' type='text/css' href='/stylesheets/style.css' />
+    <link rel='stylesheet' type='text/css' media='only screen and (min-width: 530px) and (min-device-width: 481px)' href='/stylesheets/wide.css' />
+    <link rel='stylesheet' type='text/css' media='only screen and (max-width: 480px)' href='/stylesheets/smartphone.css' />
+  	
   </head>
 
   <body>
@@ -15,12 +18,15 @@
 	    <nav class="main" id="n1" role="navigation">
 		<span><a href="/">Inicio</a></span>
    		<span><a href="/quizes/question">Preguntas</a></span>
+		<span><a href="/author">Créditos</a></span>
 	    </nav>
-	    <section>
+	    <section class="main" id="s1">
 		<%- body %>
 	    </section>
 	    <footer class="main" id="f1">
 		<a href="http://wikipedia.org/wiki/quiz" > Qué es un quiz? </a>
+		<a href="http://wikipedia.org/wiki/quiz" style="margin-left: 7px;"> GitHub - JvsQuiz </a>
+
 	    </footer>				
      </div>
   </body>
