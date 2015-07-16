@@ -1,3 +1,0 @@
-	<p>Respuesta: <%= respuesta %></p>
-	<a href="/quizes/quiestion">Intenta de nuevo</a>
-
