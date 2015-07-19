@@ -1,6 +1,6 @@
 
 
-body 	{background: #fff;}
+body 	{background: #999;}
 
 #page-wrap:after  {content: "Diseño wide";}
 

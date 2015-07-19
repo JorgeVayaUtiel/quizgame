@@ -9,8 +9,8 @@
     "node": "0.10.x",
     "npm": "1.4.x"
   },
-  "devDependencies":{
-     "sqlite3":"^3.0.4"	
+  "devDependencies": {
+    "sqlite3": "^3.0.4"
   },
   "dependencies": {
     "express": "~4.9.0",
@@ -23,6 +23,7 @@
     "express-partials": "~0.3.0",
     "sequelize": "~1.7.0",
     "pg": "~4.1.1",
-    "pg-hstore": "~2.3.2"
+    "pg-hstore": "~2.3.2",
+    "method-override": "~2.3.1"
   }
 }

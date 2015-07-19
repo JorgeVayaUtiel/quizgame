@@ -8,7 +8,7 @@ body 	{font: 16px Georgia, serif;}
 
 section > div { padding: 20px; }
 header, nav, section { background: #eee; text-align: center;}
-nav {background: #fff}
+nav {background: #999}
 header, footer {margin-bottom: 4px; padding-top: 7px; padding-bottom: 7px;}
 footer { background: #eee; text-align: center; }
 nav span { margin: 0px 10px 0px 0px; }
