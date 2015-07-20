@@ -42,7 +42,7 @@ var errors = comment.validate();
 		comment.save({fields: ["texto","QuizId"]}).then( function(){ res.redirect('/quizes')}) ;
 	}
 
-
+/
 };
 
 // GET /quizes/:quizId/comments/:commentId/publish

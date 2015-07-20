@@ -15,6 +15,7 @@ router.get('/busca', function(req, res) {
 });
 
 router.param('quizId', quizController.load);
+router.param('commentId', commentController.load);
 
 //Definición de rutas de sesión
 router.get('/login', sessionController.new);
@@ -35,15 +36,10 @@ router.get('/quizes/:quizId(\\d+)/edit', sessionController.loginRequired, quizCo
 router.get('/quizes/update/:quizId(\\d+)',sessionController.loginRequired, quizController.update);
 router.delete('/quizes/:quizId(\\d+)', sessionController.loginRequired,	quizController.destroy);
 
+//Rutas comentarios
 router.get('/quizes/:quizId(\\d+)/comments/new', commentController.new);
 router.get('/quizes/:quizId(\\d+)/add/comments', commentController.create);
-
-
-
-
-
-
-
+router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish', sessionController.loginRequired, commentController.publish);
 
 
 

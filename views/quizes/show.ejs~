@@ -11,7 +11,7 @@
 	<% if(quiz.comments[index].publicado || session.user) {%>
 		<p>- <%=quiz.comments[index].texto%></p>
 		<% if(!quiz.comments[index].publicado && session.user) {%>
-			<a href="/quizes/<%= quiz.id %>/comments/<%=quiz.comments[index].id%>/publish">Publicar</a>
+			<a href="/quizes/comments/<%=quiz.comments[index].id%>/publish">Publicar</a>
 			
 		<%}%>
 	<%}%>
