@@ -52,9 +52,9 @@ router.get('/quizes/update/:quizId(\\d+)',sessionController.sesionExpirada, sess
 router.delete('/quizes/:quizId(\\d+)', sessionController.sesionExpirada, sessionController.loginRequired,	quizController.destroy);
 
 //Rutas comentarios
-router.get('/quizes/:quizId(\\d+)/comments/new', sessionController.sesionExpirada, commentController.new);
-router.get('/quizes/:quizId(\\d+)/add/comments', sessionController.sesionExpirada,  commentController.create);
-router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish', sessionController.sesionExpirada, sessionController.loginRequired, commentController.publish);
+router.get('/quizes/:quizId(\\d+)/comments/new', commentController.new);
+router.get('/quizes/:quizId(\\d+)/add/comments', commentController.create);
+router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish', sessionController.loginRequired, commentController.publish);
 
 
 

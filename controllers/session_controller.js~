@@ -52,7 +52,7 @@ return;
 // La sesión se define por la existencia de: req.session.user
 req.session.lastAccess = new Date().getTime();
 req.session.user = {id:user.id, username:user.username, isAdmin:user.isAdmin};
-res.redirect("/");// redirección a raiz
+res.redirect("/");// redirección a path anterior a login
 });
 };
 // DELETE /logout -- Destruir sesion

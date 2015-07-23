@@ -67,10 +67,6 @@ exports.showraiz = function(req, res) {
   res.render('home', { title: 'Quiz', errors: [], mensaje:'' });
 }
 
-//GET busca
-exports.showbusca=function(req, res) {
-  res.render('find', {errors: []});
-}
 
 
 
