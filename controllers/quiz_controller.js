@@ -55,6 +55,20 @@ exports.answer= function(req,res) {
 	})
 };
 
+//GET autor
+
+exports.showautor = function(req, res) {
+	res.render('author', {errors: []});
+};
+
+//GET raiz
+
+exports.showraiz = function(req, res) {
+  res.render('home', { title: 'Quiz', errors: [], mensaje:'' });
+}
+
+
+
 
 //GET /quizes/new
 

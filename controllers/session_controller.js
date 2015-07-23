@@ -7,7 +7,30 @@ res.redirect('/login');
 }
 };
 
+//MW de comprobación
+exports.sesionExpirada = function(req, res, next)
+{
+if (req.session.user) {
+	var actual = new Date().getTime()
+	var ultima = req.session.lastAccess;
+	req.session.lastAccess= actual;
+	//Diferncia en milisegundos
+	var diferencia = actual - ultima;
+	if (diferencia>120000) {
+		//console.log('Sesion Expirada');
+		res.redirect('/logout');
+	}
+	else {
+	//console.log('Ultima ' + ultima + " Actual " + actual);
+	next();}
 
+
+}
+else
+{
+	next();
+}
+};
 // Get /login -- Formulario de login
 exports.new = function(req, res) {
 var errors = req.session.errors || {};
@@ -27,12 +50,16 @@ return;
 }
 // Crear req.session.user y guardar campos id y username
 // La sesión se define por la existencia de: req.session.user
+req.session.lastAccess = new Date().getTime();
 req.session.user = {id:user.id, username:user.username, isAdmin:user.isAdmin};
-res.redirect(req.session.redir.toString());// redirección a path anterior a login
+res.redirect("/");// redirección a path anterior a login
 });
 };
 // DELETE /logout -- Destruir sesion
 exports.destroy = function(req, res) {
 delete req.session.user;
-res.redirect(req.session.redir.toString()); // redirect a path anterior a login
+delete req.session.lastAccess;
+res.redirect("/salida"); // redirect a salida
 };
+
+
